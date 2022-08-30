@@ -6,7 +6,12 @@
 #include "glfw3.h"
 #include "glfw3native.h"
 
+#include "SOCKET.h"
+
 int main() {
+
+    std::cout << "version Major:" << SOCKET_VERSION_MAJOR <<std::endl;
+    std::cout << "version Minor:" << SOCKET_VERSION_MINOR <<std::endl;
 
     GLFWwindow *window;
 
@@ -32,6 +37,7 @@ int main() {
         glfwSwapBuffers(window);
     }
     
+    glfwTerminate();
     //wait
     std::cin.get();    
 

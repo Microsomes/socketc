@@ -1,8 +1,12 @@
 cmake_minimum_required(VERSION 3.16.3)
 
-project(SOCKET)
+project(SOCKET VERSION 0.1)
+
+configure_file(SOCKET.h.in SOCKET.h)
 
 add_executable(${PROJECT_NAME} main.cpp)
+
+target_include_directories(${PROJECT_NAME} PUBLIC ${PROJECT_BINARY_DIR})
 
 add_subdirectory(external/glfw)
 
